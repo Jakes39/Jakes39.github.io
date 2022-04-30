@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Judul</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Kalkulator Sederhana</h1>
+        </div>
+        <div class="main-container">
+            <div class="calculator-wrapper">
+                <div class="inputan">
+                    <div class="inputan-angka">
+                        <div class="angkablock">
+                            <b>Angka 1</b>
+                            <input type="text" name="angka1" id="x">
+                        </div>
+                        <div class="angkablock">
+                            <b>Angka 2</b>
+                            <input type="text" name="angka2" id="y">
+                        </div>
+                    </div>
+                    <div class="operation">
+                        <b>Operasi</b>
+                        <div class="oper-wrapper">
+                            <div class="oper">
+                                <input value="+" type="button" onclick="tambah()">
+                                <input value="-" type="button" onclick="kurang()">
+                            </div>
+                            <div class="oper">
+                                <input value="x" type="button" onclick="kali()">
+                                <input value="/" type="button" onclick="bagi()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="output-container">
+                    <b>Output</b>
+                    <div id="output"></div>
+                </div>
+            </div>
+            <div class="history">
+                <div class="sticky-top">
+                    <b>History</b>
+                </div>
+                <div id="history-out">
+                    
+                </div>
+                <div class="sticky-bot">
+                    <input type="button" value="Clear" onclick="clearHistory()">
+                </div>
+            </div>
+            <div class="bot-text">
+                <span>Ini adalah Web Aplikasi kalkulator yang sederhana.</span><br><br>
+                <span>Kalkulator tersebut menggunakan 2 variabel yang diinputkan melalui 2 kotak inputan pada bagian atas box kalkulator.</span><br><br>
+                <span>Dan terdapat 4 function JavaScript untuk keempat operasi matematika yang disamping.</span><br><br>
+                <span>Ada juga sebuah function tambahan untuk menginputkan riwayat dari kalkulator.</span>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-content">
+                <b>Dibuat oleh Muhammad Arief Rahman</b>
+                <b class="hover-text">Hover Me!</b>
+                <img src="https://lh3.googleusercontent.com/a-/AOh14GiEA58rBdCenGJRplPRtN8abOzLLcGxPQb2EeJT=s40-c" alt="">
+            </div>
+            <div class="bottom-footer">
+                <table>
+                    <tr>
+                        <td class="td-a">Nama</td>
+                        <td class="td-b">:</td>
+                        <td class="td-c">Muhammad Arief Rahman</td>
+                    </tr>
+                    <tr>
+                        <td class="td-a">Kelas</td>
+                        <td class="td-b">:</td>
+                        <td class="td-c">1 SI B</td>
+                    </tr>
+                    <tr>
+                        <td class="td-a">NIM</td>
+                        <td class="td-b">:</td>
+                        <td class="td-c">2157301099</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+    <script>
+        let x, y;
+
+        function history(a, n, b, c) {
+            const para = document.createElement("p");
+            const node = document.createTextNode(a + n + b + " = " + c);
+            para.appendChild(node);
+            const element = document.getElementById('history-out');
+            element.appendChild(para);
+        }
+
+        function clearHistory() {
+            const element = document.getElementById('history-out');
+            element.innerHTML = "";
+        }
+
+        function tambah() {
+            x = eval(document.getElementById('x').value);
+            y = eval(document.getElementById('y').value);
+            document.getElementById('output').innerHTML = x + y;
+            history(x, " + ", y, x + y);
+        }
+        function kurang() {
+            x = eval(document.getElementById('x').value);
+            y = eval(document.getElementById('y').value);
+            document.getElementById('output').innerHTML = x - y;
+            history(x, " - ", y, x - y);
+        }
+        function kali() {
+            x = eval(document.getElementById('x').value);
+            y = eval(document.getElementById('y').value);
+            document.getElementById('output').innerHTML = x * y;
+            history(x, " * ", y, x * y);
+        }
+        function bagi() {
+            x = eval(document.getElementById('x').value);
+            y = eval(document.getElementById('y').value);
+            document.getElementById('output').innerHTML = x / y;
+            history(x, " / ", y, x / y);
+        }
+    </script>
+</html>

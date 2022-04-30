@@ -1,0 +1,225 @@
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Medium.ttf);
+}
+
+html {
+    font-family: Poppins;
+    font-size: 15pt;
+}
+body {
+    background-color: rgb(218, 239, 255);
+    padding: 0;
+    margin: 0;
+
+}
+.header {
+    padding: 0.5% 20%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    background-color: #9CCFFE;
+    color: #111;
+}
+.header h1 {
+    margin: 0;
+}
+.main-container {
+    display: flex;
+    padding: 2.5% 0;
+    justify-content: center;
+    
+    background-color: rgb(208, 234, 255);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.inputan {
+    padding: 5%;
+}
+#display {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    border: 0px;
+}
+.calculator-wrapper {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.main-container > div {
+    margin: 0 1%;
+}
+.inputan-angka {
+    display: flex;
+}
+.angkablock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+}
+.inputan-angka input {
+    width: 100%;
+    font-family: Poppins;
+    font-size: 12pt;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 4px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) box-shadow 1s;
+}
+.inputan-angka input:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.inputan-angka input:focus {
+    outline: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.operation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.oper-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.oper {
+    display: flex;
+}
+.oper input[type=button] {
+    width: 100%;
+    font-family: Poppins;
+    font-size: 12pt;
+    height: 35px;
+    flex-grow: 1;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-family: Poppins;
+    cursor: pointer;
+}
+.oper input[type=button]:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2)
+}
+.output-container {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.output-container b {
+    margin: 8px;
+}
+#output {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 50%;
+    padding: 4px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+}
+.sticky-top {
+    background-color: inherit;
+    position: sticky;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    top: 0px;
+}
+.sticky-bot {
+    background-color: inherit;
+    position: sticky;
+    bottom: 0px;
+    text-align: center;
+}
+.history {
+    width: 15%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    height: 450px;
+    overflow: auto;
+    background-color: whitesmoke;
+}
+.history div p {
+    margin: 5px 0;
+    padding: 0 10px;
+}
+.history .sticky-top{
+    text-align: center;
+    padding: 15px;
+}
+.history .sticky-bot input {
+    width: 90%;
+    font-family: Poppins;
+    font-size: 12pt;
+    height: 35px;
+    flex-grow: 1;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-family: Poppins;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 0.5s;
+}
+.history .sticky-bot input:hover {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.bot-text {
+    width: 30%;
+    background-color: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.footer {
+    position: fixed;
+    bottom: -130px;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    background-color: whitesmoke;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 1s;
+}
+.footer:hover {
+    bottom: 0px;
+}
+.footer:hover .hover-text {
+    opacity: 0;
+}
+.footer-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.footer img {
+    margin: 0px 1%;
+    float: right;
+}
+.bottom-footer {
+    width: 100%;
+}
+.hover-text {
+    position: absolute; 
+    right: 1%; 
+    color: #666;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 0.5s;
+}
+.bottom-footer table {
+    margin-left: 20%;
+    margin-top: 1%;
+}
