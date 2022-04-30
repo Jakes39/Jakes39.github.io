@@ -2,4 +2,4 @@
 
 This is a simple calculator web application i made using HTML, CSS, and JavaScript
 
-jakes39.github.io
+Link to website https://jakes39.github.io
